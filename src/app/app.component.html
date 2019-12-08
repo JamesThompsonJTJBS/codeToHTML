@@ -1,0 +1,22 @@
+
+<div class="container">
+  <div class="h1">Convert Source Code to HTML friendly mark-up</div>
+  <div class="row">
+    <div class="col">
+      <h3>Source Code</h3>
+      <textarea rows="15" [(ngModel)]="sourceCode" (change)="sourceChange($event)">{{ sourceCode }}</textarea>
+    </div>
+    <div class="col-2">
+      <button (click)="convert()">Convert</button>
+    </div>
+    <div class="col">
+      <h3>HTML Friendly Markup</h3>
+      <textarea rows="15" [(ngModel)]="htmlMarkUp">{{ htmlMarkUp }}</textarea>
+    </div>
+  </div> <!-- row -->
+
+  <div class="row">
+    {{sourceCode}}
+  </div>
+</div>
+<router-outlet></router-outlet>
